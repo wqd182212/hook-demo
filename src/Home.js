@@ -7,11 +7,11 @@ function Home() {
 
     useEffect(() => {
         document.title = count;
-    });
+    }, [count]); // 仅在count更改时更新
 
     useEffect(() => {
-        console.log('wqd');
-    });
+        console.log("wqd");
+    }, []); // 仅在组件挂载和卸载时执行
 
     return (
         <div>
